@@ -7,6 +7,7 @@
 ---
 ##### Google
 [Google Document](https://developers.google.com/identity/gsi/web/reference/html-reference#element_with_class_g_id_signin)
+
 ---
 ##### Facebook
 
