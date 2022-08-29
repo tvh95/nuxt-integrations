@@ -2,7 +2,7 @@
 import { useRuntimeConfig } from '#imports'
 
 const env = useRuntimeConfig()
-const vMClientId = env.clientId
+const vMClientId = env.googleLogin.clientId
 
 defineProps({
   loginUri: { type: String, required: true },
