@@ -1,7 +1,9 @@
 export const useGtm = () => {
-  if (!window.google_tag_manager) {
-    throw new Error('GTM wasn\'t setup properly. Please check your configurations.')
-  }
+  setTimeout(() => {
+    if (!window.google_tag_manager) {
+      console.error('GTM wasn\'t setup properly. Please check your configurations.')
+    }
+  }, 1000)
 
   function pushEcommerce (event, ecommerce) {
     window.dataLayer.push({ ecommerce: null })
@@ -14,7 +16,7 @@ export const useGtm = () => {
   }
 
   return {
-    pushDataLayer: window.dataLayer.push,
+    dataLayer: window.dataLayer,
     pushEcommerce,
     pushUser
   }
