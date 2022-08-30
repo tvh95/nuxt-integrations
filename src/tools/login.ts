@@ -12,7 +12,7 @@ function facebookLogin (appId: string, version: string): { appId: string, versio
     throw new Error('Missing facebook appId or version, please check your configurations.')
   }
   addAutoImport([{
-    from: runtimeResolver.resolve('login/facebook.ts'),
+    from: runtimeResolver.resolve('login/facebook'),
     name: 'useFacebookLogin'
   }])
   return { appId, version, scriptId: 'facebook-jssdk' }
@@ -23,7 +23,7 @@ function googleLogin (clientId: string): { clientId: string, scriptId: string } 
     throw new Error('Missing google clientId or version, please check your configurations.')
   }
   addAutoImport([{
-    from: runtimeResolver.resolve('login/google.ts'),
+    from: runtimeResolver.resolve('login/google'),
     name: 'useGoogleLogin'
   }])
   addComponent({
@@ -38,7 +38,7 @@ function appleLogin (clientId: string): { clientId: string, scriptId: string } {
     throw new Error('Missing apple clientId, please check your configurations.')
   }
   // addAutoImport([{
-  //   from: runtimeResolver.resolve('login/apple.ts'),
+  //   from: runtimeResolver.resolve('login/apple'),
   //   name: 'useAppleLogin'
   // }])
   addComponent({

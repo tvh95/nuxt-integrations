@@ -10,7 +10,7 @@ function gtm (gtmId: string) {
     throw new Error('Missing gtm id, please check your configurations.')
   }
   addAutoImport([{
-    from: libResolver.resolve('./runtime/analytics/gtm.ts'),
+    from: libResolver.resolve('./runtime/analytics/gtm'),
     name: 'useGtm'
   }])
   return {

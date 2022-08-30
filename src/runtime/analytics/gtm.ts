@@ -8,7 +8,7 @@ export const useGtm = () => {
     window.dataLayer.push({ event, ecommerce })
   }
 
-  function pushUser (userId: string, loginType: string = 'email') {
+  function pushUser (userId?: string, loginType: string = 'email') {
     const data = userId ? { isLoggedIn: true, user_id: userId, loginType } : { isLoggedIn: false }
     window.dataLayer.push(data)
   }
